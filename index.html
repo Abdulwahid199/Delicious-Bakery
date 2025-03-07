@@ -9,8 +9,13 @@
 <body>
     <header>
         <h1>Delicious Bakery</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
-            <ul>
+            <ul class="menu" id="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#products">Products</a></li>
@@ -27,13 +32,7 @@
     
     <section id="about">
         <h2>About Us</h2>
-        <p>For over a decade, Delicious Bakery has been a cherished name in the world of fresh, homemade baked goods, bringing warmth, comfort, and joy to our customers with every bite. Our journey began with a simple yet profound passion for baking—an art that combines skill, love, and the finest ingredients to create something truly special. At Delicious Bakery, we believe that every pastry, cookie, and cake should not only taste amazing but also evoke feelings of happiness and nostalgia. That’s why we use only premium ingredients, including farm-fresh dairy, rich chocolates, pure vanilla, and the finest flours, ensuring that our products are wholesome, flavorful, and irresistibly delightful.
-
-            From the fluffy softness of our fresh breads to the buttery perfection of our croissants, every item is baked in small batches daily, preserving the freshness and authentic homemade taste we’re known for. Our selection features an array of mouthwatering treats, including crispy, chewy cookies, fudgy brownies, delicate pastries, and moist, flavorful cupcakes that cater to every craving. Whether you’re stopping by for a quick morning treat, an afternoon indulgence, or something sweet to share with loved ones, we have something to satisfy every taste.
-            
-            Beyond our daily bakes, we take pride in crafting custom-designed cakes for special occasions, from birthdays and weddings to anniversaries and corporate events. Our skilled decorators work closely with customers to bring their visions to life, creating stunning and delicious cakes that become the centerpiece of every celebration. Every detail, from intricate designs to personalized flavors, is carefully tailored to make each occasion unforgettable.
-            
-            At Delicious Bakery, we don’t just bake—we create experiences. We believe that great food has the power to bring people together, spark joy, and make everyday moments a little sweeter. That’s why we are committed to maintaining the highest standards of quality, hygiene, and customer satisfaction. Whether you're a long-time fan or visiting us for the first time, we invite you to step into our bakery, breathe in the comforting aroma of fresh baking, and treat yourself to something truly special. Come and experience the magic of Delicious Bakery—where every bite is made with love, and every moment is worth celebrating!</p>
+        <p>Delicious Bakery has delighted customers with fresh, homemade treats made from premium ingredients. From fluffy breads to buttery croissants and chewy cookies, every bite is crafted with love and authentic flavor.</p>
     </section>
     
     <section id="products">
@@ -45,7 +44,7 @@
                 <p>Our cakes are made with high-quality ingredients and come in a variety of flavors like chocolate, vanilla, and red velvet. Perfect for birthdays, weddings, and celebrations.</p>
             </div>
             <div class="product">
-                <img src="cookies.jpg" alt="Cookies">
+                <img src="cook.jpg" alt="Cookies">
                 <h3>Cookies</h3>
                 <p>Freshly baked cookies with a crispy exterior and a chewy center. Available in chocolate chip, oatmeal, and peanut butter flavors.</p>
             </div>
@@ -92,5 +91,17 @@
     <footer>
         <p>&copy; 2025 Delicious Bakery. All rights reserved.</p>
     </footer>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.flexDirection = 'column';
+            }
+        }
+    </script>
 </body>
 </html>

@@ -12,13 +12,21 @@ header {
     background: #ff7043;
     color: white;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+nav {
+    display: flex;
+    align-items: center;
 }
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 nav ul li a {
@@ -26,6 +34,42 @@ nav ul li a {
     color: white;
     font-weight: bold;
     font-size: 18px;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger div {
+    background: white;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ff7043;
+        text-align: center;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 section {
     padding: 50px;
@@ -54,18 +98,4 @@ footer {
 .product img {
     width: 100%;
     border-radius: 10px;
-}
-@media (max-width: 600px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-    .product-list {
-        flex-direction: column;
-        align-items: center;
-    }
 }
